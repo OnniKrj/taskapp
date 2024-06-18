@@ -3,3 +3,5 @@
 - About the structure of taskapp folders:
     - task_app contains app specific files
     - task_project contains general project settings & web server information
+
+TODO: how to run
