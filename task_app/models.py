@@ -6,13 +6,13 @@ def one_week_hence():
     return timezone.now() + timezone.timedelta(days=7)
     
 class TaskList(models.Model):
-    title = models.CharField(max_length=50, unique=True)
+    task_name = models.CharField(max_length=50, unique=True)
     
     def get_absolute_url(self):
         return reverse("list", args=[self.id])
       
     def __str__(self):
-        return self.title
+        return self.task_name
     
 class Task(models.Model):
     task_name = models.CharField(max_length=50)
@@ -27,7 +27,7 @@ class Task(models.Model):
         )
     
     def __str__(self):
-        return f"{self.title}: due {self.due_date}"
+        return f"{self.task_name}: due {self.due_date}"
     
     class Meta:
         ordering = ["due_date"]
