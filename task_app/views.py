@@ -1,7 +1,8 @@
 from typing import Any
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.db.models.query import QuerySet
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+
 from .models import TaskList, Task
 
 class ListListView(ListView):
@@ -71,3 +72,18 @@ class TaskUpdate(UpdateView):
     
     def get_success_url(self):
         return reverse("list", args=[self.object.todo_list_id])
+    
+class TaskListDelete(DeleteView):
+    model = TaskList
+    success_url = reverse_lazy("index")
+    
+class TaskDelete(DeleteView):
+    model = Task
+    
+    def get_success_url(self):
+        return reverse_lazy("list", args=[self.kwargs["list_id"]])
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["todo_list"] = self.object.todo_list
+        return context
