@@ -1,5 +1,3 @@
-- inspiration: https://realpython.com/django-todo-lists/#step-1-set-up-your-virtual-environment-and-django
-
 # My first django project - Task App!
 
 ## How to use:
@@ -11,3 +9,8 @@
 
 - After virtual environment is succesfully running:
     - python manage.py runserver
+
+
+- inspiration & credits: https://realpython.com/django-todo-lists/#step-1-set-up-your-virtual-environment-and-django
+
+<3
