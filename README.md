@@ -13,4 +13,4 @@
 
 - inspiration & credits: https://realpython.com/django-todo-lists/
 
-##<3
+## <3
