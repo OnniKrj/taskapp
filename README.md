@@ -1,7 +1,13 @@
 - inspiration: https://realpython.com/django-todo-lists/#step-1-set-up-your-virtual-environment-and-django
 
-- About the structure of taskapp folders:
-    - task_app contains app specific files
-    - task_project contains general project settings & web server information
+# My first django project - Task App!
 
-TODO: how to run
+## How to use:
+- Write to terminal 
+    - pip install requirements.txt
+
+- After requirements are installed and folder structure is similiar, start the virtual environment:
+    - .\venv\Scripts\activate
+
+- After virtual environment is succesfully running:
+    - python manage.py runserver
