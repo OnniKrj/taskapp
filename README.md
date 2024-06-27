@@ -11,6 +11,6 @@
     - python manage.py runserver
 
 
-- inspiration & credits: https://realpython.com/django-todo-lists/#step-1-set-up-your-virtual-environment-and-django
+- inspiration & credits: https://realpython.com/django-todo-lists/
 
-<3
+##<3
